@@ -47,7 +47,7 @@ function mint(count){
 
     var originalAmountToBuyWith = 0.06 * count;
 
-    var amount = Web3.utils.toWei(Web3.utils.toBN(originalAmountToBuyWith), 'ether');
+    var amount = Web3.utils.fromWei(6 * 10 ** 16, 'ether');
     //var amountToBuyWith = Web3.utils.toHex(amount);
 
     var nftContractAddress = '0xe12EDaab53023c75473a5A011bdB729eE73545e8';
