@@ -45,10 +45,10 @@ mintTwoButton.onclick = function(){
 
 function mint(count){
 
-    var amoutToBuyWith = 0.06 * count;
+    var originalAmountToBuyWith = 0.06 * count;
 
-    var amount = Web3.utils.toWei(Web3.utils.toBN(amoutToBuyWith), 'ether');
-    var amountToBuyWith = Web3.utils.toHex(amount);
+    var amount = Web3.utils.toWei(Web3.utils.toBN(originalAmountToBuyWith), 'ether');
+    //var amountToBuyWith = Web3.utils.toHex(amount);
 
     var nftContractAddress = '0xe12EDaab53023c75473a5A011bdB729eE73545e8';
 
@@ -66,7 +66,7 @@ function mint(count){
     gas: Web3.utils.toHex(620000), // customizable by user during MetaMask confirmation.
     to: nftContractAddress, // Required except during contract publications.
     from: account, // must match user's active address.
-    value: Web3.utils.toHex(amountToBuyWith), // Only required to send ether to the recipient from the initiating external account.
+    value: Web3.utils.toHex(amount), // Only required to send ether to the recipient from the initiating external account.
     data: data.encodeABI(),
     chainId: '0x3' // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
     };
