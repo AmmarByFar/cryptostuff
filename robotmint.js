@@ -1,11 +1,8 @@
 window.onload = function(){ 
     var connectWalletButton = document.getElementById("connect_wallet");
     var mintOneButton = document.getElementById("mint_nft");
-    var mintTwoButton = document.getElementById("mint_2");
-    
-    
-    
-    
+    //var mintTwoButton = document.getElementById("mint_2");
+     
 };
 
 
@@ -13,11 +10,11 @@ var abi = "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"baseURI\",\"typ
 var nftContractAbi = JSON.parse(abi);
 
 
-if (mintOneButton.style.display === "none") {
-    mintOneButton.style.display = "block";
-  } else {
-    mintOneButton.style.display = "none";
-  }
+//if (mintOneButton.style.display === "none") {
+//    mintOneButton.style.display = "block";
+//  } else {
+//    mintOneButton.style.display = "none";
+//  }
 
 connectWalletButton.onclick = function(){
 
@@ -54,9 +51,9 @@ mintOneButton.onclick = function(){
     var txHash = mint(1);
 };
 
-mintTwoButton.onclick = function(){
-    var txHash = mint(2);
-};
+// mintTwoButton.onclick = function(){
+//     var txHash = mint(2);
+// };
 
 
 function mint(count){
